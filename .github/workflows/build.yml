@@ -37,11 +37,11 @@ jobs:
           ${{ github.event_name == 'pull_request' && 'Pull Request Notification' || '' }}
           ${{ github.event_name == 'release' && 'Release Notification' || '' }}
         description: |
-          ${{ github.event_name == 'push' && format('Commit `{0}`  \nBranch `{1}`  \nMessage: `{2}`  \nCheck out the commit [here]({3}/{4}/commit/{5})', github.sha, github.ref, github.event.head_commit.message, github.server_url, github.repository, github.sha) || '' }}
+          ${{ github.event_name == 'push' && format('Commit `{0}`  Branch `{1}`  Message: `{2}`  Check out the commit [here]({3}/{4}/commit/{5})', github.sha, github.ref, github.event.head_commit.message, github.server_url, github.repository, github.sha) || '' }}
           
-          ${{ github.event_name == 'pull_request' && format('PR #{0} - `{1}`  \nSource branch: `{2}`  \nView it [here]({3})', github.event.pull_request.number, github.event.pull_request.title, github.event.pull_request.head.ref, github.event.pull_request.html_url) || '' }}
+          ${{ github.event_name == 'pull_request' && format('PR #{0} - `{1}`  Source branch: `{2}`  View it [here]({3})', github.event.pull_request.number, github.event.pull_request.title, github.event.pull_request.head.ref, github.event.pull_request.html_url) || '' }}
           
-          ${{ github.event_name == 'release' && format('Version `{0}`  \nClick [here]({1}) to download!', github.event.release.tag_name, github.event.release.html_url) || '' }}
+          ${{ github.event_name == 'release' && format('Version `{0}`  Click [here]({1}) to download!', github.event.release.tag_name, github.event.release.html_url) || '' }}
         color: |
           ${{ github.event_name == 'push' && '0x00ff00' || '' }}
           ${{ github.event_name == 'pull_request' && '0xff0000' || '' }}
