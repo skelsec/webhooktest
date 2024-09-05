@@ -2,13 +2,13 @@
 
 ## :triangular_flag_on_post: Sponsors
 
-If you like this project, consider sponsoring it by purchusing licenses from [OctoPwn](https://octopwn.com/)
+If you like this project, consider sponsoring it by purchasing licenses from [OctoPwn](https://octopwn.com/)
 
 # msldap
 LDAP library for MS AD
 ![Documentation Status](https://user-images.githubusercontent.com/19204702/81515211-3761e880-9333-11ea-837f-bcbe2a67ee48.gif )
 
-## :triangular_flag_on_post: Sponsors
+## :triangular_flag_on_post: Runs in the browser
 
 This project, alongside with many other pentester tools runs in the browser with the power of OctoPwn!  
 Check out the community version at [OctoPwn - Live](https://live.octopwn.com/)
