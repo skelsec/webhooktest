@@ -2,7 +2,7 @@
 
 ## :triangular_flag_on_post: Sponsors
 
-If you like this project, consider sponsoring it by purchasing licenses from [OctoPwn](https://octopwn.com/)
+If you like this project, consider purchasing licenses of [OctoPwn](https://octopwn.com/), our full pentesting suite that runs entirely in your browser!
 
 # msldap
 LDAP library for MS AD
