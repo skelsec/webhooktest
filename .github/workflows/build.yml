@@ -1,0 +1,40 @@
+name: Build Windows Executable - PyInstaller
+# Description:
+# Most of my projects come with a build.bat script that uses PyInstaller to freeze the examples
+# to an executable file. This Action will set up the envrionment and run this build.bat script,
+# then upload the resulting executables to a google cloud bucket.
+# Additionally the executables will be compressed and encrypted using 7z
+
+on:
+  push:
+    branches:
+      - main # Trigger on push to master branch
+
+jobs:
+  build:
+    runs-on: windows-latest # Use a Windows runner
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    
+    steps:        
+    - uses: 'actions/checkout@v4'
+      with:
+        fetch-depth: 0
+
+    
+    - uses: sarisia/actions-status-discord@v1
+      if: always()
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
+        status: ${{ job.status }}
+        content: "Hey <@here>! New build happened for project ${{ github.event.repository.name }}!"
+        title: "build"
+        description: |
+          Version `${{ github.event.release.tag_name }}`
+          Click [here](${{ github.event.release.html_url }}) to download!
+        #image: ${{ secrets.EMBED_IMAGE }}
+        color: 0x0000ff
+        url: "${{ github.server_url }}/${{ github.repository }}"
+        username: GitHub Actions
+        avatar_url: "https://avatars.githubusercontent.com/u/19204702"
