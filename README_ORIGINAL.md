@@ -2,7 +2,7 @@
 
 ## :triangular_flag_on_post: Sponsors
 
-If you like this project, consider sponsoring it by purchusing licenses from [OctoPwn](https://octopwn.com/)
+If you like this project, consider sponsoring it on GitHub! [Sponsors](https://github.com/sponsors/skelsec/)
 
 # msldap
 LDAP library for MS AD
@@ -10,8 +10,7 @@ LDAP library for MS AD
 
 ## :triangular_flag_on_post: Sponsors
 
-This project, alongside with many other pentester tools runs in the browser with the power of OctoPwn!  
-Check out the community version at [OctoPwn - Live](https://live.octopwn.com/)
+If you want to sponsor this project, you can do it on GitHub now!
 
 # Documentation
 [Awesome documentation here!](https://msldap.readthedocs.io/en/latest/)
